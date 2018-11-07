@@ -88,13 +88,20 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          */
 
+        let feed;
+
         beforeEach((done) => {
-            loadFeed(0, done);
+            loadFeed(0, () => {
+                feed = document.querySelector('.feed').innerHTML;
+                loadFeed(1, () => {
+                    done();
+                })
+            });
         });
         
         it('should be loaded', (done) => {
             const newFeed = document.querySelector('.feed').innerHTML;
-            expect(newFeed).toBeTruthy();
+            expect(newFeed).not.toBe(feed);
             done();
         });
     });

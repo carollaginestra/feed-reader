@@ -5,7 +5,7 @@ This project is a feed reader that using [Jasmine framework](https://jasmine.git
 ## Getting Started
 
 - Clone the project
-- Visit localhost/feed-reader to start the application.
+- Visit localhost/feed-reader/index.html to start the application.
 
 ## Built With
 
