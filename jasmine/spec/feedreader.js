@@ -77,7 +77,7 @@ $(function() {
 
         it('should be done', () => {
             const feedDiv = document.querySelectorAll(".feed .entry");
-            expect(feedDiv.length > 0).toBeGreaterThan(0);
+            expect(feedDiv.length).toBeGreaterThan(0);
         });
 
     });
